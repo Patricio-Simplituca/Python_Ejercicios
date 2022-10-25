@@ -1,0 +1,78 @@
+import random
+from math import sqrt
+
+# -----------------------1)
+#Hacer una funcion que genere una contraseña aleatoria de 10 caracteres (7 letras y 3 numeros)
+# def clave():
+#     contraseña=""
+#     for i in range(7):
+#         contraseña=contraseña+chr(random.randint(ord("A"),ord("Z")))
+#     for i in range(3):
+#         contraseña=contraseña+chr(random.randint(ord("0"),ord("9")))
+#     print (contraseña)
+
+# clave()
+
+#------------------2)
+# Mostrar la abreviatura de una frase ingresada. La abreviatura, para este programa será el
+# conjunto de las primeras letras de cada palabra que forma la frase, en mayúsculas
+# (aunque se haya ingresado en minúsculas) . Utilizar el método upper
+
+# EJ.:
+# se ingresa: el señor de los anillos
+# resultado: ESDLA
+
+# def abreviar(frase): 
+#     mayusculas=frase.title()
+#     frase_sin_espacios=mayusculas.replace(" ","")
+#     abreviatura=""
+#     frase_len=len(frase_sin_espacios)
+#     for i in range(frase_len):
+#         letra=frase_sin_espacios[i]
+#         if letra.isupper()==True:
+#             abreviatura=abreviatura+letra
+#     print(abreviatura)
+
+# def main():
+#     frase=input("Ingrese una frase: ")
+#     abreviar(frase)
+
+# main()
+
+#-------------------3)
+# Objetivo: determinar si dos circulos se tocan
+# Utilizando POO crear dos clases distintas, punto y circulo, las cuales tendrán resposabilidades (métodos) diferentes.
+# El punto tendrá un método encargado de devolver la distancia a otro punto.
+# El circulo a su vez tendrá una función en la cual debe recibir otro circulo y retornar verdadero o falso para la pregunta si se tocan con entre si.
+
+# class Punto():
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+
+#     def calcular_distancia(self,p):
+#         distancia= sqrt((self.x-p.x)**2+(self.y-p.y)**2)
+#         return distancia
+
+# class Circulo():
+#     def __init__(self,radio,punto):
+#         self.radio=int(radio) 
+#         self.punto=punto      
+
+
+#     def tocar(self,c): 
+#         suma_radios=self.radio+c.radio 
+#         if self.punto.calcular_distancia(c.punto) < suma_radios: 
+#             return True
+#         else:
+#             return False
+
+# punto1=Punto(3,2)
+# punto2=Punto(-3,-5)
+# circulo1=Circulo(50,punto1)
+# circulo2=Circulo(20,punto2)
+
+# distancia=punto1.calcular_distancia(punto2)
+# print("la distancia de los dos puntos es de ",distancia)
+# tocar=circulo1.tocar(circulo2)
+# print("se tocan?",tocar)
